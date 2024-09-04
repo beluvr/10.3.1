@@ -16,3 +16,16 @@ buttonRemove.addEventListener("click", function () {
     alert("No existe ningun párrafo para eliminar");
   }
 });
+
+
+buttonAdd.addEventListener("click", function () {
+  let text = inputParagraph.value;
+  if (text) {
+    let paragraph = document.createElement("p");
+    paragraph.appendChild(document.createTextNode(text));
+    container.appendChild(paragraph);
+    inputParagraph.value = "";
+  } else {
+    alert("Debe ingresar algún texto para ser ingresado")
+  }
+});
